@@ -24,7 +24,7 @@ class UserLoginView(TemplateView):
         if user:
             if user.is_active:
                 login(request, user)
-                return HttpResponseRedirect(reverse('index'))
+                return HttpResponseRedirect(reverse('home'))
             else:
                 return HttpResponse('Account is not active.')
         else:
@@ -33,6 +33,6 @@ class UserLoginView(TemplateView):
 @login_required
 def user_logout(request):
     logout(request)
-    return HttpResponseRedirect(reverse('index'))
+    return HttpResponseRedirect(reverse('home'))
     
 # Create a Register(signup) class
