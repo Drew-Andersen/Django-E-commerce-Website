@@ -31,7 +31,7 @@
                     <li class="nav-item {% if request.path == '/' %}active{% endif %}">
                         <a class="nav-link" href="{% url 'shop_app:home' %}">
                             Home {% if request.path == '/' %}<span class="sr-only">(current)</span>{% endif %}
-                        </a>
+                        </a> 
                     </li>
                     <li class="nav-item {% if request.path == '/test/' %}active{% endif %}">
                         <a class="nav-link" href="{% url 'shop_app:test' %}">
