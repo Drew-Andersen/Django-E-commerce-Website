@@ -13,6 +13,9 @@ class IndexView(TemplateView):
 class TestView(TemplateView):
     template_name = 'shop_app/test.html'
 
+class CartView(TemplateView):
+    template_name = 'shop_app/cart.html'
+
 class UserLoginView(View):
     def get(self, request):
         return render(request, 'shop_app/login.html')
