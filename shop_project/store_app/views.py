@@ -35,7 +35,6 @@ class UserLoginView(View):
         else:
             return HttpResponse('Invalid login details supplied!')
 
-@login_required
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse('home'))
