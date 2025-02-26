@@ -1,0 +1,23 @@
+.margin-top {
+    margin-top: 150px;
+}
+
+.form-div {
+    display: block;
+    max-width: 275px;
+    margin: auto;
+    text-align: left;
+}
+
+form {
+    margin: auto;
+}
+
+@media only screen and (max-width: 500px) {
+    .form-div {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+}

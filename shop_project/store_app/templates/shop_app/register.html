@@ -1,23 +1,33 @@
 {% extends 'shop_app/shop_base.html' %}
-{% block title_block %}
-    Sign Up
+
+{% load static %}
+
+{% block head_block %}
+<link rel="stylesheet" href="{% static 'css/register.css' %}">
 {% endblock %}
+
+{% block title_block %}
+Sign Up
+{% endblock %}
+
 {% block body_block %}
 
-    <div class="jumbotron">
+<div class="jumbotron margin-top text-center">
 
-        {% if registered %}
-            <h1>Thank you for signing up!</h1>
-        {% else %}
+    {% if registered %}
+    <h1>Thank you for signing up!</h1>
+    {% else %}
 
-            <h1>Sign Up</h1>
-            <form enctype="multipart/form-data" method="POST">
-                {% csrf_token %}
-                {{ user_form.as_p }}
-                {{ profile_form.as_p }}
-                <input type="submit" value="Register">
-            </form>
-
-        {% endif %}
+    <h1 class="mb-4">Sign Up</h1>
+    <div class="form-div">
+        <form enctype="multipart/form-data" method="POST">
+            {% csrf_token %}
+            {{ user_form.as_p }}
+            {{ profile_form.as_p }}
+            <input class="btn btn-primary" type="submit" value="Register">
+        </form>
     </div>
+
+    {% endif %}
+</div>
 {% endblock %}
