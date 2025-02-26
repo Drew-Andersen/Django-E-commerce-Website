@@ -47,6 +47,9 @@
                         <a class="nav-link" href="{% url 'shop_app:cart' %}"><i class="fa fa-shopping-cart" aria-hidden="true"> Cart</i></a>
                     </li>
                     {% else %}
+                    <li class="nav-item {% if request.path == '/register/' %}active{% endif %}">
+                        <a class="nav-link" href="{% url 'shop_app:register' %}">Register</a>
+                    </li>
                     <li class="nav-item {% if request.path == '/login/' %}active{% endif %}">
                         <a class="nav-link" href="{% url 'shop_app:user_login' %}">Login</a>
                     </li>
